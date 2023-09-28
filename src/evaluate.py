@@ -2,4 +2,7 @@
 from torch.utils.data import Dataset, DataLoader, random_split
 import torch
 
-class SummaryDataset(
+class SummaryDataset(Dataset):
+    def __init__(self, documents, summaries):
+        self.documents = documents
+        self.
