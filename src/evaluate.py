@@ -5,4 +5,9 @@ import torch
 class SummaryDataset(Dataset):
     def __init__(self, documents, summaries):
         self.documents = documents
-        self.
+        self.summaries = summaries
+
+    def __len__(self):
+        return len(self.documents)
+
+    def
