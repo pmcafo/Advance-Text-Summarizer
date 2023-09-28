@@ -10,4 +10,7 @@ class SummaryDataset(Dataset):
     def __len__(self):
         return len(self.documents)
 
-    def
+    def __getitem__(self, idx):
+        return self.documents[idx], self.summaries[idx]
+
+# Load your preprocessed 
