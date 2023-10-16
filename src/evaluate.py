@@ -13,4 +13,6 @@ class SummaryDataset(Dataset):
     def __getitem__(self, idx):
         return self.documents[idx], self.summaries[idx]
 
-# Load your preprocessed 
+# Load your preprocessed data
+documents = ["...", "...", "..."]  # Replace with your preprocessed documents
+summaries = ["...", "...",
