@@ -15,4 +15,7 @@ class SummaryDataset(Dataset):
 
 # Load your preprocessed data
 documents = ["...", "...", "..."]  # Replace with your preprocessed documents
-summaries = ["...", "...",
+summaries = ["...", "...", "..."]  # Replace with your preprocessed summaries
+
+# Initialize the T5 tokenizer and model
+tokenizer = T5T
