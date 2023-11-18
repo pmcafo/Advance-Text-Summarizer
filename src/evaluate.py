@@ -19,4 +19,9 @@ summaries = ["...", "...", "..."]  # Replace with your preprocessed summaries
 
 # Initialize the T5 tokenizer and model
 tokenizer = T5Tokenizer.from_pretrained('t5-base')
-model = T5ForConditionalGeneration.from_pretrained('t5-base'
+model = T5ForConditionalGeneration.from_pretrained('t5-base')
+
+# Create a PyTorch Dataset
+dataset = SummaryDataset(documents, summaries)
+
+# Split the dataset
