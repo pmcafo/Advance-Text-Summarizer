@@ -24,4 +24,6 @@ model = T5ForConditionalGeneration.from_pretrained('t5-base')
 # Create a PyTorch Dataset
 dataset = SummaryDataset(documents, summaries)
 
-# Split the dataset
+# Split the dataset into training and validation sets
+train_size = int(0.8 * len(dataset))
+val_size = len(dataset) - t
