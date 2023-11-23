@@ -26,4 +26,7 @@ dataset = SummaryDataset(documents, summaries)
 
 # Split the dataset into training and validation sets
 train_size = int(0.8 * len(dataset))
-val_size = len(dataset) - t
+val_size = len(dataset) - train_size
+train_dataset, val_dataset = random_split(dataset, [train_size, val_size])
+
+# Create PyTorch Da
