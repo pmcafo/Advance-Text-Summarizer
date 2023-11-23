@@ -29,4 +29,6 @@ train_size = int(0.8 * len(dataset))
 val_size = len(dataset) - train_size
 train_dataset, val_dataset = random_split(dataset, [train_size, val_size])
 
-# Create PyTorch Da
+# Create PyTorch DataLoaders for training and validation
+train_dataloader = DataLoader(train_dataset, batch_size=32)
+val_dataload
