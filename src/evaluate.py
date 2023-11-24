@@ -39,4 +39,6 @@ optimizer = AdamW(model.parameters(), lr=1e-5)
 # Train the model
 for epoch in range(10):  # 10 epochs
     model.train()
-    for document
+    for document, summary in train_dataloader:
+        # Encode the document and summary
+        input_ids = tokenize
