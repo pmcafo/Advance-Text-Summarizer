@@ -34,4 +34,9 @@ train_dataloader = DataLoader(train_dataset, batch_size=32)
 val_dataloader = DataLoader(val_dataset, batch_size=32)
 
 # Initialize the optimizer
-optimizer = AdamW(model.parameters(), lr=1e
+optimizer = AdamW(model.parameters(), lr=1e-5)
+
+# Train the model
+for epoch in range(10):  # 10 epochs
+    model.train()
+    for document
