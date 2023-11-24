@@ -31,4 +31,7 @@ train_dataset, val_dataset = random_split(dataset, [train_size, val_size])
 
 # Create PyTorch DataLoaders for training and validation
 train_dataloader = DataLoader(train_dataset, batch_size=32)
-val_dataload
+val_dataloader = DataLoader(val_dataset, batch_size=32)
+
+# Initialize the optimizer
+optimizer = AdamW(model.parameters(), lr=1e
