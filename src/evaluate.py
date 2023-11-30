@@ -41,4 +41,7 @@ for epoch in range(10):  # 10 epochs
     model.train()
     for document, summary in train_dataloader:
         # Encode the document and summary
-        input_ids = tokenizer(document, return_tensors='pt', truncation=True, padding=True, max_length=512)['inpu
+        input_ids = tokenizer(document, return_tensors='pt', truncation=True, padding=True, max_length=512)['input_ids']
+        labels = tokenizer(summary, return_tensors='pt', truncation=True, padding=True, max_length=150)['input_ids']
+
+  
