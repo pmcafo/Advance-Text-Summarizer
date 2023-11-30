@@ -46,4 +46,9 @@ for epoch in range(10):  # 10 epochs
 
         # Compute the loss
         outputs = model(input_ids=input_ids, labels=labels)
-        l
+        loss = outputs.loss
+
+        # Backpropagate the loss
+        loss.backward()
+
+        # Clip the 
