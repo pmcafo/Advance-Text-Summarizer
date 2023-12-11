@@ -51,4 +51,6 @@ for epoch in range(10):  # 10 epochs
         # Backpropagate the loss
         loss.backward()
 
-        # Clip the 
+        # Clip the gradient norms (optional)
+        torch.nn.utils.clip_grad_norm_(model.parameters(), 1.0)
+
