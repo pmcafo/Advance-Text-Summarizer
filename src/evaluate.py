@@ -54,3 +54,8 @@ for epoch in range(10):  # 10 epochs
         # Clip the gradient norms (optional)
         torch.nn.utils.clip_grad_norm_(model.parameters(), 1.0)
 
+        # Update the weights
+        optimizer.step()
+        optimizer.zero_grad()
+
+    # Eval
