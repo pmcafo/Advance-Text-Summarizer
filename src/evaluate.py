@@ -58,4 +58,8 @@ for epoch in range(10):  # 10 epochs
         optimizer.step()
         optimizer.zero_grad()
 
-    # Eval
+    # Evaluate the model on the validation set
+    model.eval()
+    val_loss = 0
+    with torch.no_grad():
+        for document, s
