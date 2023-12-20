@@ -62,4 +62,6 @@ for epoch in range(10):  # 10 epochs
     model.eval()
     val_loss = 0
     with torch.no_grad():
-        for document, s
+        for document, summary in val_dataloader:
+            # Encode the document and summary
+            input_ids = tokenizer
