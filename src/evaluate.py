@@ -65,4 +65,4 @@ for epoch in range(10):  # 10 epochs
         for document, summary in val_dataloader:
             # Encode the document and summary
             input_ids = tokenizer(document, return_tensors='pt', truncation=True, padding=True, max_length=512)['input_ids']
-           
+            labels = tokenizer(summary, return_tensors='pt', truncation=True, padding=True, max_length=1
