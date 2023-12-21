@@ -64,4 +64,5 @@ for epoch in range(10):  # 10 epochs
     with torch.no_grad():
         for document, summary in val_dataloader:
             # Encode the document and summary
-            input_ids = tokenizer
+            input_ids = tokenizer(document, return_tensors='pt', truncation=True, padding=True, max_length=512)['input_ids']
+           
