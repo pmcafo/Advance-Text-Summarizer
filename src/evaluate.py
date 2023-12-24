@@ -69,3 +69,8 @@ for epoch in range(10):  # 10 epochs
 
             # Compute the loss
             outputs = model(input_ids=input_ids, labels=labels)
+            loss = outputs.loss
+
+            val_loss += loss.item()
+
+    print(f'Validation lo
