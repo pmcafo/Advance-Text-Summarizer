@@ -73,4 +73,7 @@ for epoch in range(10):  # 10 epochs
 
             val_loss += loss.item()
 
-    print(f'Validation lo
+    print(f'Validation loss after epoch {epoch}: {val_loss / len(val_dataloader)}')
+
+# Save the trained model
+model.save_pretrained('/mo
