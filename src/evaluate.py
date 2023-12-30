@@ -76,4 +76,7 @@ for epoch in range(10):  # 10 epochs
     print(f'Validation loss after epoch {epoch}: {val_loss / len(val_dataloader)}')
 
 # Save the trained model
-model.save_pretrained('/mo
+model.save_pretrained('/model.p')'''
+
+from transformers import T5Tokenizer, T5ForConditionalGeneration
+from rouge_score im
