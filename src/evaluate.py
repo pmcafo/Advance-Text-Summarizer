@@ -79,4 +79,7 @@ for epoch in range(10):  # 10 epochs
 model.save_pretrained('/model.p')'''
 
 from transformers import T5Tokenizer, T5ForConditionalGeneration
-from rouge_score im
+from rouge_score import rouge_scorer
+import torch
+
+def evaluate(model_path, test_documents, test_summaries):
