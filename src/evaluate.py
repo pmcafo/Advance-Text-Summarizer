@@ -92,4 +92,7 @@ def evaluate(model_path, test_documents, test_summaries):
 
     rouge1 = 0
     rouge2 = 0
-    rougeL
+    rougeL = 0
+
+    # Iterate over the test data
+    for document, reference_summary in zip(test_docu
