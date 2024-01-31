@@ -83,3 +83,6 @@ from rouge_score import rouge_scorer
 import torch
 
 def evaluate(model_path, test_documents, test_summaries):
+    # Load the trained model
+    model = T5ForConditionalGeneration.from_pretrained(model_path)
+    tokenizer = T
