@@ -88,4 +88,8 @@ def evaluate(model_path, test_documents, test_summaries):
     tokenizer = T5Tokenizer.from_pretrained('t5-base')
 
     # Initialize the ROUGE scorer
-    scorer = rouge_scorer.RougeScorer(
+    scorer = rouge_scorer.RougeScorer(['rouge1', 'rouge2', 'rougeL'], use_stemmer=True)
+
+    rouge1 = 0
+    rouge2 = 0
+    rougeL
