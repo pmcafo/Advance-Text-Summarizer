@@ -95,4 +95,6 @@ def evaluate(model_path, test_documents, test_summaries):
     rougeL = 0
 
     # Iterate over the test data
-    for document, reference_summary in zip(test_docu
+    for document, reference_summary in zip(test_documents, test_summaries):
+        # Encode the document
+        input_ids = tokenizer(document, return_tenso
