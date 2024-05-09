@@ -104,4 +104,6 @@ def evaluate(model_path, test_documents, test_summaries):
         generated_summary = tokenizer.decode(output_ids[0], skip_special_tokens=True)
 
         # Calculate the ROUGE scores
-        scores = scorer.
+        scores = scorer.score(reference_summary, generated_summary)
+        rouge1 += scores['rouge1'].fmeasure
+        rouge2 += scores[
