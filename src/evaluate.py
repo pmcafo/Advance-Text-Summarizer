@@ -109,4 +109,9 @@ def evaluate(model_path, test_documents, test_summaries):
         rouge2 += scores['rouge2'].fmeasure
         rougeL += scores['rougeL'].fmeasure
 
-    # Calculate the avera
+    # Calculate the average ROUGE scores
+    rouge1 /= len(test_documents)
+    rouge2 /= len(test_documents)
+    rougeL /= len(test_documents)
+
+    p
