@@ -106,4 +106,7 @@ def evaluate(model_path, test_documents, test_summaries):
         # Calculate the ROUGE scores
         scores = scorer.score(reference_summary, generated_summary)
         rouge1 += scores['rouge1'].fmeasure
-        rouge2 += scores[
+        rouge2 += scores['rouge2'].fmeasure
+        rougeL += scores['rougeL'].fmeasure
+
+    # Calculate the avera
