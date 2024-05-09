@@ -114,4 +114,7 @@ def evaluate(model_path, test_documents, test_summaries):
     rouge2 /= len(test_documents)
     rougeL /= len(test_documents)
 
-    p
+    print(f'ROUGE-1: {rouge1}, ROUGE-2: {rouge2}, ROUGE-L: {rougeL}')
+
+if __name__ == "__main__":
+   
