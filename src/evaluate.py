@@ -100,4 +100,5 @@ def evaluate(model_path, test_documents, test_summaries):
         input_ids = tokenizer(document, return_tensors='pt', truncation=True, padding=True, max_length=512)['input_ids']
 
         # Generate the summary
-   
+        output_ids = model.generate(input_ids)
+        generated_summary = tokenizer.decode(output_ids[
