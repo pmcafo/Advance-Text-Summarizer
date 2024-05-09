@@ -97,4 +97,7 @@ def evaluate(model_path, test_documents, test_summaries):
     # Iterate over the test data
     for document, reference_summary in zip(test_documents, test_summaries):
         # Encode the document
-        input_ids = tokenizer(document, return_tenso
+        input_ids = tokenizer(document, return_tensors='pt', truncation=True, padding=True, max_length=512)['input_ids']
+
+        # Generate the summary
+   
