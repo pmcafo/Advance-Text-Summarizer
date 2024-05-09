@@ -101,4 +101,7 @@ def evaluate(model_path, test_documents, test_summaries):
 
         # Generate the summary
         output_ids = model.generate(input_ids)
-        generated_summary = tokenizer.decode(output_ids[
+        generated_summary = tokenizer.decode(output_ids[0], skip_special_tokens=True)
+
+        # Calculate the ROUGE scores
+        scores = scorer.
