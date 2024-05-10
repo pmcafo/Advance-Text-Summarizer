@@ -117,4 +117,5 @@ def evaluate(model_path, test_documents, test_summaries):
     print(f'ROUGE-1: {rouge1}, ROUGE-2: {rouge2}, ROUGE-L: {rougeL}')
 
 if __name__ == "__main__":
-   
+    model_path = '/model.p'  # Replace with the path to your trained model
+    test_documents = ["...
