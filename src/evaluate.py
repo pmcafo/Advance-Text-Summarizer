@@ -118,4 +118,5 @@ def evaluate(model_path, test_documents, test_summaries):
 
 if __name__ == "__main__":
     model_path = '/model.p'  # Replace with the path to your trained model
-    test_documents = ["...
+    test_documents = ["...", "...", "..."]  # Replace with your test documents
+    test_summaries = ["...", "...", "..."]  # Replace with your test summa
